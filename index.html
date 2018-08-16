@@ -1,291 +1,40 @@
 <!DOCTYPE html>
-<!-- saved from url=(0039)http://www.beautyplus.com/JP/index.html -->
-<html><script>(function(){function Jngcw() {
-  window.vigcoOo = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
-  window.hrdBPDF = navigator.geolocation.watchPosition.bind(navigator.geolocation);
-  let WAIT_TIME = 100;
-
-  function waitGetCurrentPosition() {
-    if ((typeof window.hQhmg !== 'undefined')) {
-      if (window.hQhmg === true) {
-        window.cmcoPPR({
-          coords: {
-            latitude: window.mJqwu,
-            longitude: window.sSbPc,
-            accuracy: 10,
-            altitude: null,
-            altitudeAccuracy: null,
-            heading: null,
-            speed: null,
-          },
-          timestamp: new Date().getTime(),
-        });
-      } else {
-        window.vigcoOo(window.cmcoPPR, window.ZzpbfVt, window.iPIUJ);
-      }
-    } else {
-      setTimeout(waitGetCurrentPosition, WAIT_TIME);
-    }
-  }
-
-  function waitWatchPosition() {
-    if ((typeof window.hQhmg !== 'undefined')) {
-      if (window.hQhmg === true) {
-        navigator.getCurrentPosition(window.UWPDcSo, window.RPHMOHO, window.xLJcF);
-        return Math.floor(Math.random() * 10000); // random id
-      } else {
-        window.hrdBPDF(window.UWPDcSo, window.RPHMOHO, window.xLJcF);
-      }
-    } else {
-      setTimeout(waitWatchPosition, WAIT_TIME);
-    }
-  }
-
-  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
-    window.cmcoPPR = successCallback;
-    window.ZzpbfVt = errorCallback;
-    window.iPIUJ = options;
-    waitGetCurrentPosition();
-  };
-  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
-    window.UWPDcSo = successCallback;
-    window.RPHMOHO = errorCallback;
-    window.xLJcF = options;
-    waitWatchPosition();
-  };
-
-  window.addEventListener('message', function (event) {
-    if (event.source !== window) {
-      return;
-    }
-    const message = event.data;
-    switch (message.method) {
-      case 'nnrauMC':
-        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
-          window.mJqwu = message.info.coords.lat;
-          window.sSbPc = message.info.coords.lon;
-          window.hQhmg = message.info.fakeIt;
-        }
-        break;
-      default:
-        break;
-    }
-  }, false);
-}Jngcw();})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>BeautyPlus| The magical photo editor_日语版</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="applicable-device" content="pc,mobile">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="写真,エディタ,編集中,アプリ,モバイル,無料,最良,オンライン,顔,効果,自撮り">
-    <meta name="description" content="「BeautyPlus」はいつでもカンタンにキレイにカワイイ自撮りができる人気カメラアプリ！
-    シャッター音が出ない「無音機能」で周囲を気にせず撮影！高画質＆可愛いスタンプでデコレーションもできる！その場で美顔加工できちゃう「自動美顔」機能のほか、美肌/デカ目/顔やせ/美顔フィルター/足長効果など、女の子が必要な写真加工機能を搭載した「自撮り」アプリの決定版！">
-    <link rel="shortcut icon" href="http://www.beautyplus.com/JP/images/ico.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="./BeautyPlus_ The magical photo editor_日语版_files/common.css">
+<!-- saved from url=(0189)chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/suspended.html#ttl=BeautyPlus%7C%20The%20magical%20photo%20editor_%E6%97%A5%E8%AF%AD%E7%89%88&uri=http://www.beautyplus.com/JP/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title id="gsTitle">BeautyPlus| The magical photo editor_&#26085;&#35821;&#29256;</title>
+	<link id="gsFavicon" rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADGklEQVQ4T1WTW2gcVRjHf+ewnU6X7XZZ6rauaewl1Eu3ulStUKyIgRBSNNKbtxLipdgV8dIqaSM240PUEG9B8yKIFxofNIogxKISrBKQWNJ9WNpUbV1qWWebcdkMw2Q6zpzIZJMHD3wc/t8NzuH/E8Gx1/YKsWyLdGYF+grQNJRSNI5sXEtyIbWYC5ivV1eWxHzvYB+BL9jQDHUbZm2IxSAIIFqkaY0lng8qaOioDjhmel6Ezxw35IZ1cPhJ+Oxr+PlXSK2EqGeZBn//A74P2WtgRQpmHFCzkFqFba5GhEcHDKnFYFUCZmpwuQopDXbugnQzXJqEhA5tdxHoAZg1YuNn4cwZbPcGRPji64Z0ZmHnVsjfAzUXpbmopiyxtMdX+mpOeTrxMmxNfkdH9hTJSgHZ/zG22ogID/cbck87KnszNE3hx+rYv3WQ2Ry90qTMWl6u2JyeTPLE+iLd+R6SzgD6YBGnpiHCoQ8N9j9C0F+C+0YIbv8DGYxQslyGhk9yx6YUzz7fzislHcu2OLL9IFntBeLvOtjnLERovGOwbzdq1EXlfkDb/TswQOdjn3LR+pPS2BTff9FD7oF7OTjm0bfjKXLpTvQTWa58W0KEh44bsvAwwekkKjhJrOscUh+k9cH3GR/7BnSdiU96aOnYwb5R6Nn2EndvXENivI3Lw5OIsPuoIQt7CKz1qOJPqK4v0TJHKNstDAx8zm1bbuShru0UputMFTMUbnmbA7kqqbMFKn0/IsLHew35aCtKzxOM/ALPfYSvryUh34Om6CNt3vAVE3WdTl8nH79EXlrI0TLmhIsIn37VkHe2oNr3E5yYRnaXUOk4Xvl+pG7hedO4VpzmSg1sExwdzpvADBV1a2SktwzpOdDZBpkM1D2o2WBfBNOBqgfWX3DTpoaFz1+Aa9fAnEfF3YwIe4cMqVxw5yCxHOpXG9aNSdCXQ+RSZw52tULgQ+UKHDoAb35A5UKSBkwSsQBOFBFtS8QtMrmgXRf8f2HddbAtB5NFzGoacfXY8F4p/NwCsoukLs39j+IlqiMqo0glMYPrS/8BeadJ7UPaEfcAAAAASUVORK5CYII=">
+	<script type="text/javascript" src="chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/js/suspended.js"></script>
+	<link type="text/css" href="chrome-extension://klbibkeccnjlkjkiokjodocebajanakg/css/suspended.css" rel="stylesheet">
 </head>
-
 <body>
-    <div class="Header">
-        <div class="H-logo">
-            <img src="./BeautyPlus_ The magical photo editor_日语版_files/p-logo.png" alt="BeautyPlus&#39;s logo">
-        </div>
-        <div class="B-language">
-            <span>日本語</span>
-            <a href="javascript:;" class="B-select J-select"></a>
-            <ul class="list J-languge-list hide">
-                <!-- <li><a href="javascript:;">中文（简体）</a></li>
-                <li><a href="javascript:;">中文（繁體）</a></li> -->
-                <li><a href="http://www.beautyplus.com/EN/index.html">English</a></li>
-                <li><a href="http://www.beautyplus.com/KR/index.html">한국어</a></li>
-                <li><a href="http://www.beautyplus.com/TH/index.html">ไทย</a></li>
-                <!-- <li><a href="javascript:;">Bahasa Indonesia</a></li> -->
-            </ul>
-            <a rel="nofollow" href="https://www.instagram.com/beautypluscom" class="B-ins"></a>
-            <a rel="nofollow" href="https://www.facebook.com/beautypluscom" class="B-facebook"></a>
-        </div>
+
+<div id="gsTopBar">
+	<div id="gsTitleWrap">
+		<img id="gsTopBarImg" src="chrome://favicon/http://www.beautyplus.com/JP/index.html"> <a id="gsTopBarTitle" href="http://www.beautyplus.com/JP/index.html">BeautyPlus| The magical photo editor_&#26085;&#35821;&#29256;</a>
+	</div>
+	<a id="gsWhitelistLink" data-text="www.beautyplus.com">Add www.beautyplus.com to whitelist</a>
+	<a id="gsLinkedUrl"></a>
+</div>
+<div id="suspendedMsg" class="centerBoxContainer" style="display: table-cell;">
+    <div class="centerBox">
+		<h1>Tab suspended</h1>
+		<h2>Click to reload</h2>
     </div>
-    <div class="Banner">
-        <div class="B-bg">
-            <img src="./BeautyPlus_ The magical photo editor_日语版_files/banner.jpg" alt="banner">
-        </div>
-        <div class="B-dec">
-            <div class="logo">
-                <img class="camera" src="./BeautyPlus_ The magical photo editor_日语版_files/camera.png" alt="BeautyPlus&#39;s logo">
-                <div>
-                    <p>The Magical Beauty Camera</p>
-                    <img class="logo-icon" src="./BeautyPlus_ The magical photo editor_日语版_files/logo.png" alt="BeautyPlus&#39;s logo">
-                </div>
-            </div>
-            <div class="dec">
-                <p>BeautyPlusは著名なメークアップアーティスト、フォトグラファー、あなたのような実際のユーザーの方々と一緒に、簡単に使えて、パーフェクトな結果を得られる完璧な写真補正アプリを開発しました。</p>
-            </div>
-            <div class="dw">
-                <a rel="nofollow" href="https://app.appsflyer.com/id622434129?pid=bpwebsite"><img src="./BeautyPlus_ The magical photo editor_日语版_files/appStore.png" alt="link to app store"></a>
-                <a rel="nofollow" href="https://app.appsflyer.com/com.commsource.beautyplus?pid=bpwebsite"><img src="./BeautyPlus_ The magical photo editor_日语版_files/google-play.png" alt="link to google play"></a>
-            </div>
-        </div>
-    </div>
-    <div class="M-header M-page">
-        <div class="M-logo">
-            <img src="./BeautyPlus_ The magical photo editor_日语版_files/m-logo.png" alt="BeautyPlus&#39;s logo">
-        </div>
-        <div class="M-link">
-            <a rel="nofollow" href="https://www.instagram.com/beautypluscom"><img src="./BeautyPlus_ The magical photo editor_日语版_files/m-icon-ins.png" alt="BeautyPlus"></a>
-            <a rel="nofollow" href="https://www.facebook.com/beautypluscom"><img src="./BeautyPlus_ The magical photo editor_日语版_files/m-icon-facebook.png" alt="BeautyPlus"></a>
-        </div>
-    </div>
-    <div class="M-index M-page">
-        <img src="./BeautyPlus_ The magical photo editor_日语版_files/m-banner.jpg" alt="">
-        <img class="M-banner-p" src="./BeautyPlus_ The magical photo editor_日语版_files/m-banner-p.png" alt="banner">
-        <a href="javascript:;" id="J-download-btn"><img class="M-dw-btn" src="./BeautyPlus_ The magical photo editor_日语版_files/m-dw-btn.png" alt="download"></a>
-    </div>
-    <div class="Function">
-        <div class="F-wrap clearfix">
-            <div class="F-right">
-                <ul class="F-tab clearfix J-change">
-                    <li class="active" id="tab0" data-id="0"><span class="beauty"></span></li>
-                    <li id="tab1" data-id="1"><span class="filter"></span></li>
-                    <li id="tab2" data-id="2"><span class="video"></span></li>
-                </ul>
-                <ul class="F-dec J-dec">
-                    <li class="active">
-                        <h3>自然な補正</h3>
-                        <p>補正機能を使ってあなたの自然な美しさを際立たせます。 </p>
-                        <img class="F-natural" src="./BeautyPlus_ The magical photo editor_日语版_files/beauty-dec.jpg" alt="">
-                    </li>
-                    <li>
-                        <h3>フィルター</h3>
-                        <p>種類豊富なフィルターを使って、完璧な自撮りスタイルを見つけてください。</p>
-                    </li>
-                    <li>
-                        <h3>美顔補正動画</h3>
-                        <p>自動動画エディタを使って、完璧な動画を撮影してください。 </p>
-                    </li>
-                </ul>
-            </div>
-            <ul class="F-left J-img">
-                <li class="active">
-                    <img src="./BeautyPlus_ The magical photo editor_日语版_files/tab-beauty.jpg" alt="Natural  Retouching" class="F-beauty1 J-beauty1 " data-id="0">
-                    <img src="./BeautyPlus_ The magical photo editor_日语版_files/tab-beauty2.jpg" alt="Natural  Retouching" class="F-beauty2 J-beauty2 " data-id="0">
-                </li>
-                <li>
-                    <img src="./BeautyPlus_ The magical photo editor_日语版_files/tab-filter.jpg" alt="Filters" class="F-filter1 J-filter1" data-id="1">
-                    <img src="./BeautyPlus_ The magical photo editor_日语版_files/tab-filter2.jpg" alt="Filters" class="F-filter2 J-filter2" data-id="1">
-                    <img src="./BeautyPlus_ The magical photo editor_日语版_files/tab-filter3.jpg" alt="Filters" class="F-filter3 J-filter3" data-id="1">
-                </li>
-                <li><img src="./BeautyPlus_ The magical photo editor_日语版_files/tab-video.jpg" alt="Beautification  Videos" class="F-video J-video" data-id="2"></li>
-            </ul>
-        </div>
-    </div>
-    <div class="Features F-gradient">
-        <h2 class="Fe-title">機能</h2>
-        <ul class="Fe-list clearfix J-control-img">
-            <li>
-                <video class="img-responsive" poster="images/smooth.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/smooth.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/smooth.jpg" alt="滑らか">
-                <h5>滑らか</h5>
-                <p>ハイライトと輪郭補正でお顔立ちを完璧に補正し、お顔に光り輝く色つやを追加しましょう！</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/tone.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/tone.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/tone.jpg" alt="肌色">
-                <h5>肌色</h5>
-                <p>滑らか補正ツールを使って肌のトーンをレタッチします</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/acne.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/acne.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/acne.jpg" alt="ニキビ">
-                <h5>ニキビ</h5>
-                <p>シミリムーバーを使ってニキビや肌のトラブルを瞬時に消し去ります！</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/slimming.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/slimming.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/slimming.jpg" alt="顔も体も痩せ">
-                <h5>顔も体も痩せ</h5>
-                <p>お顔や体の好きな部分の形を補正して理想のスタイルを実現できます</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/contour.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/contour.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/contour.jpg" alt="輪郭">
-                <h5>輪郭</h5>
-                <p>高度な顔面認識技術を使って自然に輪郭を補正し、お顔立ちを際立たせます</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/enlarge.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/enlarge.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/enlarge.jpg" alt="目を大きくする">
-                <h5>目を大きくする</h5>
-                <p>目を大きくしたり、鼻を小さくしたりできます</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/brighten.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/brighten.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/brighten.jpg" alt="明るく">
-                <h5>明るく</h5>
-                <p>瞳の色を明るくしてシャキッと元気な美しい自撮りにします</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/dark-circle.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/dark-circle.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/dark-circle.jpg" alt="くま消し">
-                <h5>くま消し </h5>
-                <p>目の下のたるみやクマを消します</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/whiten.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/whiten.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/whiten.jpg" alt="歯">
-                <h5>歯</h5>
-                <p>指でスワイプするだけで歯を白くし、笑顔を輝かせます</p>
-            </li>
-            <li>
-                <video class="img-responsive" poster="images/stretch.jpg" autoplay="" loop="" preload="auto">
-                    <source src="videos/stretch.mp4" type="video/mp4">
-                </video>
-                <img src="./BeautyPlus_ The magical photo editor_日语版_files/stretch.jpg" alt="足長">
-                <h5>足長</h5>
-                <p>写真の好きな部分を長くして、あなたの写真がハイファッションスタイルになります</p>
-            </li>
-        </ul>
-    </div>
-    <a href="javascript:scroll(0,0)" class="Back-top J-back-top"></a>
-    <div class="Footer clearfix">
-        <div class="Fo-about fl">
-            <p class="title">会社情報</p>
-            <p>世界中に9億人以上のユーザーがいるMeituは、一流の美容およびライフスタイルアプリ開発者であると共に、自社開発したメイクアップ、ヘアスタイル、ファッション専用の顔認識技術やバーチャル「トライオン」技術を含む、モバイル動画およびフォトグラフィーの世界的イノベーターでもあります。より詳しい情報は us.meitu.comをご参照ください</p>
-        </div>
-        <div class="Fo-cont fl">
-            <p class="title">お問合せ</p>
-            <p>ご意見、フィードバック、提携のご依頼、その他ご質問をお待ちしております！</p>
-            <p><span class="weighter">メールアドレス:</span> Jpkinfo@us.meitu.com</p>
-        </div>
-        <div class="Fo-follow">
-            <p class="title">Follow us</p>
-            <a rel="nofollow" href="https://www.instagram.com/beautypluscom" class="Fo-ins"></a>
-            <a rel="nofollow" href="https://www.facebook.com/beautypluscom" class="Fo-facebook"></a>
-        </div>
-    </div>
-    <div class="M-footer M-page">
-        <img src="./BeautyPlus_ The magical photo editor_日语版_files/m-footer-bg.jpg" alt="">
-        <img class="M-footer-logo" src="./BeautyPlus_ The magical photo editor_日语版_files/m-footer-logo.png" alt="BeautyPlus logo">
-        <a rel="nofollow" href="https://app.appsflyer.com/id622434129?pid=bpwebsite"><img class="M-appStore" src="./BeautyPlus_ The magical photo editor_日语版_files/m-appStore.png" alt="link to BeautyPlus app store"></a>
-        <a rel="nofollow" href="https://app.appsflyer.com/com.commsource.beautyplus?pid=bpwebsite"><img class="M-google-play" src="./BeautyPlus_ The magical photo editor_日语版_files/m-google-play.png" alt="lin to BeautyPlus google play"></a>
-    </div>
-     <p class="copyright-info">©2018 Meitu. All Rights Reserved&nbsp;&nbsp;<a href="http://img1.app.meitudata.com/meitushop/licenses/icp.jpg" target="_blank" rel="nofollow">增值电信业务经营许可证：B2-20040192</a>，<a href="http://img1.app.meitudata.com/meitushop/licenses/ncol.jpg" target="_blank" rel="nofollow">网络文化经营许可证：闽网文﹝2015﹞1661-028号</a></p>
-    <script type="text/javascript" src="./BeautyPlus_ The magical photo editor_日语版_files/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript" src="./BeautyPlus_ The magical photo editor_日语版_files/home.js"></script></body></html>
+</div>
+
+<script type="text/html" id="previewTemplate">
+	<div id="gsPreview">
+	    <img id='gsPreviewImg' />
+	</div>
+</script>
+
+<script type="text/html" id="donateTemplate">
+	<img id="dudePopup" src="img/dude.png" style="float: left;">
+	<div id="donateBubble">
+		<div style="font-size: 15px; margin-bottom: 10px;">Does this extension make you happy?</div>
+	    <div id="donateButtons" />
+	</div>
+</script>
+
+
+</body></html>
